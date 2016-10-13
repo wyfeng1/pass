@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米账号-登录</title>
+    <link rel="stylesheet" href="../CSS/login-register.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <script src="../JS/jquery-1.12.4.min.js"></script>
+
+</head>
+<body onload="window">
+    <div class="loginOuter">
+        <div class="loginBox">
+            <div class="loginHeader">
+                <div class="loginLogo"></div>
+                <h4 class="loginTitle">小米账号登录</h4>  
+            </div>
+            <div class="loginArea">
+                <form action="" method="post">
+                    <div class="loginInputBox">
+                        <input type="text" id="username" placeholder="邮箱/手机号码/小米账号" />
+                        <input type="password" id="psd" placeholder="密码" />
+                        <span id="errorTxt"></span>
+                        <input type="submit" id="loginBtn" value="立即登录" />
+                    </div>
+                    <div class="otherLoginType">
+                        <fieldset class="otherLoginTypeTitle">
+                            <legend class="otherLoginTypeTxt">其他登录方式</legend>
+                        </fieldset>
+                        <div class="otherLoginTypeLinks">
+                            <a href="#" class="loginType">QQ</a>
+                            <a href="#" class="loginType">微博</a>
+                            <a href="#" class="loginType">支付宝</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="loginLinks">
+                <a href="#" class="loginLinkA loginLinkAFirst">注册小米账号</a>
+                <a href="#" class="loginLinkA">忘记密码？</a>
+            </div>
+        </div>
+        <div class="loginfooter">
+            <ul class="fontType">
+                <li>简体</li>
+                <li>繁体</li>
+                <li>English</li>
+                <li class="fontTypeLast">常见问题</li>
+            </ul>
+            <p class="loginIntro">小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
+        </div>
+    </div>
+    <script src="../JS/login.js"></script>
+</body>
+</html>

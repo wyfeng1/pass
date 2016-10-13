@@ -1,0 +1,210 @@
+/* goodListcontent */
+.goodListContentOuter{
+    width:100%;
+    height:auto;
+    padding: 20px 0 100px;
+    background: #f5f5f5;
+    color: #333;
+    font-size: 14px;
+}
+.goodListContent{ 
+    width: 1226px;
+    /*height: 1392px;*/
+    margin: 0 auto;
+}
+.goodListContentSort{
+    width: 1226px;
+    height: 20px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+.goodListContentSortLink{
+    float: left;
+    height: 20px;
+    width: 373px;
+}
+.goodListContentSortLink li{
+    float: left;
+    padding: 0 30px;
+    border-left: 1px solid #e0e0e0;
+    line-height: 20px;
+}
+.goodListContentSortLink .goodListContentSortLinkFirst{
+    padding-left: 0;
+    border-left: 0;
+}
+.goodListContentSortLink li:hover{
+    color: #FF6700;
+}
+.goodListContentSortchoose{
+    width: 426px;
+    height: 20px;
+    float: right;
+}
+.goodListContentSortchoose li{
+    float: left;
+    margin-left: 30px;
+}
+.goodListContentSortchoose li:hover{
+    color: #FF6700;
+}
+
+/* 列表 */
+.goodsListBox{
+    width: 1226px;
+    /*height: 1332px;*/
+    margin: 0 auto;
+    height: auto;
+}
+#goodList{
+    width: 1240px;
+    height: 1332px
+}
+.goodItem{
+    position: relative;
+    float: left;
+    width: 296px;
+    height: 383px;
+    padding-top: 47px;
+    margin-right: 14px;
+    margin-bottom: 14px;
+    text-align: center;
+    background: #fff;
+}
+.goodPicture{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 16px;
+}
+.goodPicture img{
+    width: 200px;
+    height: 200px;
+}
+.goodIntro{
+    margin: 0 0 3px;
+    height: 18px;
+    font-size: 12px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #b0b0b0;
+}
+.goodName{
+    height: 21px;
+    margin: 0 0 3px;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.goodPrice{
+    height:21px;
+    line-height: 21px;
+    text-align: center;
+    margin: 0 0 15px;
+    color: #ff6700;
+}
+.goodBtn{
+    width: 100%;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    overflow: hidden;
+    background: #ffffff;
+    color: #FF6700;
+    border: 0;
+}
+.goodBtn:hover{
+    background: #FF6700;
+    color: #ffffff;
+}
+
+/* 为你推荐 */
+.indexXmStar{
+    width: 1226px;
+    height: 438px;
+    margin: 0 auto;
+    margin-top: 26px;
+}
+.indexBoxHeader{
+    position: relative;
+    height: 58px;
+}
+.indexTitle{
+    text-align: center;
+    font-size: 22px;
+    color: #333333;
+    font-weight: 200;
+    line-height: 58px;
+}
+.more{
+    width: 70px;
+    height: 24px;
+    position: absolute;
+    top:20px;
+    right: 0;
+}
+.indexScrollImgBox{
+    width: 1226px;
+    height: 340px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.indexScrollImg{
+    width: 4960px;
+    height: 340px;
+}
+.indexImgItem{
+    float: left;
+    border-top: 1px solid #ffac13;
+    width: 234px;
+    height: 300px;
+    padding-top: 39px;
+    text-align: center;
+    background: #fafafa;
+    margin-right: 14px;
+}
+.indexImgItem img{
+    width: 160px;
+    height: 160px;
+}
+.PicTitle{
+    color: #212121;
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.intro{
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    margin: 6px 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #b0b0b0;
+}
+.scrollPage{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 500px;
+}
+.scrollPage li{
+    float: left;
+    width: 6px;
+    height: 6px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #b0b0b0;
+}

@@ -1,0 +1,20 @@
+html,body,div,a,p,ul,li,img,dl,dd,dt,form,input,button,fieldset,select,option,span,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+ul,li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none; 
+}
+img{
+	border: 0;
+}
+body{
+	font: 12px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+	color: #333;
+	background-color: #fff;
+	min-width: 1226px;
+}

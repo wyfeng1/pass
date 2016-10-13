@@ -1,0 +1,13 @@
+[
+  {"production":"小米手机5","intro":"","price":"1799元起","picture":"../images/goodlist1.jpg"},
+  {"production":"小米手机4","intro":"黑科技手机，3D玻璃机身","price":"1099元起","picture":"../images/goodlist2.jpg"},
+  {"production":"小米手机1","intro":"黑科技手机","price":"1399元起","picture":"../images/goodlist3.jpg"},
+  {"production":"小米手机2","intro":"黑科技手机，3D玻璃机身","price":"1299元起","picture":"../images/goodlist3.jpg"},
+  {"production":"小米手机3","intro":"3D玻璃机身","price":"1899元起","picture":"../images/goodlist2.jpg"},
+  {"production":"小米手机6","intro":"黑科技手机，3D玻璃机身","price":"1599元起","picture":"../images/goodlist1.jpg"},
+  {"production":"小米手机7","intro":"黑科技手机","price":"1399元起","picture":"../images/goodlist1.jpg"},
+  {"production":"小米手机8","intro":"黑科技手机，3D玻璃机身","price":"1699元起","picture":"../images/goodlist2.jpg"},
+  {"production":"小米手机9","intro":"3D玻璃机身","price":"1799元起","picture":"../images/goodlist3.jpg"},
+  {"production":"小米手机0","intro":"黑科技手机，3D玻璃机身","price":"1499元起","picture":"../images/goodlist3.jpg"},
+  {"production":"小米手机11","intro":"黑科技手机，3D玻璃机身","price":"1799元起","picture":"../images/goodlist2.jpg"}
+]

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米5详情</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/commen.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/reset.css" />
+    <script src="../JS/jquery-1.12.4.min.js"></script>
+    <script src="../JS/commen.js"></script>
+    <style>
+        .louti{
+            width: 100%;
+            height: 743px;
+        } 
+        .louti img{
+            width: 100%;
+            height: 100%;
+        }
+        #floornav{
+            width: 30px;
+            position: fixed;
+            right: 50px;
+            top: 250px;
+        }
+        #floornav li{
+            width: 5px;
+            height: 5px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: #9d9d9d;
+            position: relative;
+            cursor: pointer;
+        }
+        #floornav .select{
+            border: 2px solid #424242;
+            margin-left: 8px;
+            border-radius: 10px;
+            background: #ffffff;
+        }
+        .loutiTxt{
+            position: absolute;
+            width: 605px;
+            left: 21%;
+            top: 50%;
+        }
+        .loutiTxtTitle{
+            color: #212121;
+            margin: 0;
+            font-weight: normal;
+            font-size: 45px;
+            line-height: 50px;
+        }
+        .loutiTxtContent{
+            margin-top: 20px;
+            color: #757575;
+            font-size: 12px;
+            margin-bottom: 95px;
+        }
+        .loutiTxtPrice i{
+            font-style: normal;
+            font-size: 36px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body onload="window">
+<!-- Top -->
+<div class="topOuter">
+    <div class="top">
+        <ul class="topNavLinks">
+            <li><a class="topNavLink" href="#">小米商城</a>
+                <span>&nbsp;|&nbsp; </span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">MIUI</a>
+                <span>&nbsp;|&nbsp;</span>
+
+            </li>
+            <li>
+                <a class="topNavLink" href="#">米聊</a>
+                <span>&nbsp;|&nbsp;</span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">游戏</a>
+                <span>&nbsp;|&nbsp;</span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">多看阅读</a>
+                <span>&nbsp;|&nbsp;</span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">云服务</a>
+                <span>&nbsp;|&nbsp;</span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">金融</a>
+                <span>&nbsp;|&nbsp;</span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">小米网移动版</a>
+                <span>&nbsp;|&nbsp;</span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">问题反馈</a>
+                <span>&nbsp;|&nbsp;</span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">Select Region</a>
+            </li>
+        </ul>
+        <a class="indexShopCart" href="shopCart.html">
+            购物车
+        </a>
+        <div class="indexLogin">
+            <a class="topNavLink" href="login.html">登录</a>
+            <span>&nbsp;|&nbsp;</span>
+            <a class="topNavLink" href="register.html">注册</a>
+            <span>&nbsp;|&nbsp;</span>
+            <a class="topNavLink" href="#">消息通知</a>
+        </div>
+    </div>
+</div>
+
+<!-- topNav -->
+<div class="topNav">
+    <div class="topLogoOuter">
+        <div class="topLogo"></div>
+    </div>
+    <!-- 导航 -->
+    <ul class="headerNav">
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">小米手机</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">红米</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">平板·笔记本</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">电视</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">盒子·影音</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">路由器</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">智能硬件</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">服务</a>
+            <ul class="aHoverList"></ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">社区</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <!-- search -->
+    <div id="headerSearch">
+        <form action="" class="searchForm">
+            <input type="text" id="searchText" />
+            <ul id="searchResult">
+                <li><a class="searchResultItem" href="detail.html">小米5</a></li>
+                <li><a class="searchResultItem" href="#">红米Note4</a></li>
+                <li><a class="searchResultItem" href="#">小米盒子</a></li>
+                <li><a class="searchResultItem" href="#">路由器</a></li>
+                <li><a class="searchResultItem" href="#">小米手环</a></li>
+            </ul>
+            <input type="submit" value="搜索" class="searchBtn" />
+            <div class="searchHotWords">
+                <a href="#">红米Note4</a>
+                <a href="#">小米5黑科技</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<ul id="floornav">
+    <li class="select"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<div id="content">
+    <div class="louti">
+        <img src="../images/xiaomi5Detail1.jpg">
+        <div class="loutiTxt">
+            <h1 class="loutiTxtTitle">小米手机5</h1>
+            <h1 class="loutiTxtTitle">十余项黑科技，很轻狠快</h1>
+            <p class="loutiTxtContent">骁龙820处理器，最大可选 4GB 内存 + 128GB 闪存<br />4 轴防抖相机，3D陶瓷 / 玻璃机身<br />支持手机分身，能刷公交卡、银行卡</p>
+            <p class="loutiTxtPrice" style="color: #f7353a"><i>1799</i>元起，直降200！</p>
+        </div>
+    </div>
+    <div class="louti">
+        <img src="../images/xiaomi5Detail2.jpg">
+    </div>
+    <div class="louti">
+        <img src="../images/xiaomi5Detail3.jpg">
+    </div>
+    <div class="louti">
+        <img src="../images/xiaomi5Detail4.jpg">
+    </div>
+    <div class="louti">
+        <img src="../images/xiaomi5Detail5.jpg">
+    </div>
+    <div class="louti">
+        <img src="../images/xiaomi5Detail6.jpg">
+    </div>
+</div>
+
+<!-- bottom -->
+<div class="bottomTopOuter">
+    <div class="bottomTop">
+        <div class="bottomServiceBox">
+            <ul class="bottomService">
+                <li class="bottomServiceItem bottomServiceItemFirst">1小时快修服务</li>
+                <li class="bottomServiceItem">7天无理由退货</li>
+                <li class="bottomServiceItem">15天免费换货</li>
+                <li class="bottomServiceItem">满150元包邮</li>
+                <li class="bottomServiceItem">520余家售后网点</li>
+            </ul>
+        </div>
+        <!-- 链接 -->
+        <div class="bottomTopLinksBox">
+            <ul class="bottomTopLinks">
+                <li class="bottomTopLinksItem bottomTopLinksItemFirst">帮助中心</li>
+                <li class="bottomTopLinksItem"><a href="#">账户管理</a></li>
+                <li class="bottomTopLinksItem"><a href="#">购物指南</a></li>
+                <li class="bottomTopLinksItem"><a href="#">订操作单</a></li>
+            </ul>
+            <ul class="bottomTopLinks">
+                <li class="bottomTopLinksItem bottomTopLinksItemFirst">帮助中心</li>
+                <li class="bottomTopLinksItem"><a href="#">账户管理</a></li>
+                <li class="bottomTopLinksItem"><a href="#">购物指南</a></li>
+                <li class="bottomTopLinksItem"><a href="#">订操作单</a></li>
+            </ul>
+            <ul class="bottomTopLinks">
+                <li class="bottomTopLinksItem bottomTopLinksItemFirst">帮助中心</li>
+                <li class="bottomTopLinksItem"><a href="#">账户管理</a></li>
+                <li class="bottomTopLinksItem"><a href="#">购物指南</a></li>
+                <li class="bottomTopLinksItem"><a href="#">订操作单</a></li>
+            </ul>
+            <ul class="bottomTopLinks">
+                <li class="bottomTopLinksItem bottomTopLinksItemFirst">帮助中心</li>
+                <li class="bottomTopLinksItem"><a href="#">账户管理</a></li>
+                <li class="bottomTopLinksItem"><a href="#">购物指南</a></li>
+                <li class="bottomTopLinksItem"><a href="#">订操作单</a></li>
+            </ul>
+            <ul class="bottomTopLinks">
+                <li class="bottomTopLinksItem bottomTopLinksItemFirst">帮助中心</li>
+                <li class="bottomTopLinksItem"><a href="#">账户管理</a></li>
+                <li class="bottomTopLinksItem"><a href="#">购物指南</a></li>
+                <li class="bottomTopLinksItem"><a href="#">订操作单</a></li>
+            </ul>
+            <ul class="bottomTopLinks">
+                <li class="bottomTopLinksItem bottomTopLinksItemFirst">帮助中心</li>
+                <li class="bottomTopLinksItem"><a href="#">账户管理</a></li>
+                <li class="bottomTopLinksItem"><a href="#">购物指南</a></li>
+                <li class="bottomTopLinksItem"><a href="#">订操作单</a></li>
+            </ul>
+            <div class="bottomTopContact">
+                <p class="phone">400-100-5678</p>
+                <p class="indexContactTime">
+                    周一至周日 8:00-18:00<br/>
+                    （仅收市话费）
+                </p>
+                <a href="#" class="indexContactBtn">24小时在线客服</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottomOuter">
+    <div class="bottom">
+        <div class="bottomLogo"></div>
+        <div class="bottomTxt">
+            <ul class="bottomLinks">
+                <li>
+                    <a href="#" class="bottomLinksItem">小米商城&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">MIUI&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">米聊&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">多看书城&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">小米路由器&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">视频电话&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">小米后院&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">小米天猫店&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">小米淘宝直营店&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">小米网盟&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">问题反馈&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">Select Region</a>
+                </li>
+            </ul>
+            <div class="copyRight">
+                <p>&copy;mi.com 京ICP证110507号 京ICP备10046444 京公网安备11010802020134号 京网文[2014]0059-0009号</p>
+                <p>违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+            </div>
+        </div>
+        <div class="bottomFriendLinksBox">
+            <a class="bottomFriendLink" href="#"><img src="../images/friendLink1.png"></a>
+            <a class="bottomFriendLink" href="#"><img src="../images/friendLink2.png"></a>
+            <a class="bottomFriendLink" href="#"><img src="../images/friendLink3.png"></a>
+            <a class="bottomFriendLink" href="#"><img src="../images/friendLink4.png"></a>
+        </div>
+    </div>
+    <div class="bottomBt">探索黑科技，小米为发烧而生！</div>
+</div>
+
+<script>
+    window.onload = function () {
+        setTimeout(function () {
+            $("body,html").scrollTop(0);
+        },100);
+    };
+
+    var $navs = $("#floornav li");
+    var $floors = $("#content .louti");
+    var ifNeed = true;
+    $navs.click(function () {
+        ifNeed = false;
+        var index = $(this).index();
+        var ot = $floors.eq(index).offset().top;
+        $("body,html").stop(true).animate({scrollTop:ot}, function () {
+            ifNeed = true;
+        });
+        $(this).addClass("select")
+                .siblings().removeClass("select");
+    });
+
+    $(window).scroll(function () {
+        var st = $(window).scrollTop();
+        if (ifNeed == true) {
+            for ( var i = 0, len = $floors.size(); i < len; i++) {
+                var boundValue = $floors.eq(i).offset().top + $floors.eq(i).height()/2;
+                if(st < boundValue) {
+                    $navs.eq(i).addClass("select").siblings().removeClass("select");
+                    break;//
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

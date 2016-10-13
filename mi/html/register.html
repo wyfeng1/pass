@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米账号-注册</title>
+    <link rel="stylesheet" href="../CSS/login-register.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <script src="../JS/jquery-1.12.4.min.js"></script>
+</head>
+<body onload="window">
+<div class="loginOuter">
+    <div class="loginBox">
+        <div class="loginHeader">
+            <div class="loginLogo"></div>
+            <h4 class="loginTitle">注册小米账号</h4>
+        </div>
+        <div class="regArea">
+            <form action="" method="post" >
+                <div class="selectBox">
+                    <select>
+                        <option>中国+86</option>
+                        <option>中国台湾+886</option>
+                        <option>中国香港+852</option>
+                    </select>
+                </div>
+                <input type="tel" id="phone" placeholder="请输入手机号码" />
+                <div id="phoneError">您输入的手机号码有误！</div>
+                <input type="password" id="psd" placeholder="密码" />
+                <div id="psdError">请输入6~12位密码！</div>
+                <input type="text" id="verification" placeholder="请输入验证码" /><span id="verificationCode"></span>
+                <div id="verificationError">您输入的验证码有误！</div>
+                <input type="submit" id="verificationBtn" value="注册"/>
+                <p class="regTxt">点击“立即注册”，即表示您同意并愿意遵守小米<a href="#">用户协议</a>和<a href="#">隐私政策</a></p>
+            </form>
+        </div>
+        <div class="loginLinks">
+            <a href="#" class="loginLinkA loginLinkAFirst">注册小米账号</a>
+            <a href="#" class="loginLinkA">忘记密码？</a>
+        </div>
+    </div>
+    <div class="loginfooter">
+        <ul class="fontType">
+            <li>简体</li>
+            <li>繁体</li>
+            <li>English</li>
+            <li class="fontTypeLast">常见问题</li>
+        </ul>
+        <p class="loginIntro">小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
+    </div>
+</div>
+<script src="../JS/register.js"></script>
+</body>
+</html>

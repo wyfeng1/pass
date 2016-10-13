@@ -1,0 +1,12 @@
+[
+  {"production":"小米5 高配64G","intro":"黑科技手机，3D玻璃机身","price":"2099元","picture":"../images/indexXmStarpic0.png"},
+  {"production":"小米Max 优惠200元","intro":"128GB大容量，4850mAh大电池","price":"1799元","picture":"../images/indexXmStarpic1.jpg"},
+  {"production":"红米Pro 十核双摄","intro":"购机即送Type-C转接头","price":"1499元起","picture":"../images/indexXmStarpic2.jpg"},
+  {"production":"小米笔记本","intro":"独立显卡，超轻薄，金属机身","price":"3499元","picture":"../images/indexXmStarpic3.jpg"},
+  {"production":"小米平板2 16GB现货","intro":"轻薄全金属，海量内容","price":"999元","picture":"../images/indexXmStarpic4.jpg"},
+  {"production":"小米电视3S 48英寸","intro":"原装液晶屏，金属机身","price":"1999元","picture":"../images/indexXmStarpic5.jpg"},
+  {"production":"小米盒子3 增强版","intro":"高端 4K 网络机顶盒","price":"399元","picture":"../images/indexXmStarpic6.jpg"},
+  {"production":"小米手环2","intro":"每天早10点开售","price":"149元","picture":"../images/indexXmStarpic7.jpg"},
+  {"production":"小米体重秤","intro":"100g，喝杯水都可感知的精准","price":"99元","picture":"../images/indexXmStarpic8.jpg"},
+  {"production":"小米空气净化器2","intro":"10分钟，房间空气焕然一新","price":"699元","picture":"../images/indexXmStarpic9.png"}
+]

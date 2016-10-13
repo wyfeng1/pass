@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米5详情</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/commen.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/reset.css" />
+    <script src="../JS/jquery-1.12.4.min.js"></script>
+    <script src="../JS/commen.js"></script>
+    <script src="../JS/jquery.fly.min.js"></script> 
+    <script src="../JS/requestAnimationFrame.js"></script> 
+
+    <style>
+      #Oimg{
+        position: fixed;
+        top:30px;
+        right:0;
+        z-index: 100;
+    }
+     .u-flyer{display: block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        position: fixed;
+        z-index: 9999;
+    }
+    #msg{position:fixed;
+     top:300px; right:35px;
+     z-index:10000;
+     width:1px;
+     height:52px;
+     line-height:52px;
+     font-size:20px; 
+     text-align:center; 
+     color:#fff; background:#360;
+     display:none
+    }
+        #goodsBox{
+            text-align: center;
+            width: 200px;
+            height: 390px;
+        }
+        button {
+            height: 40px;
+            width: 200px;
+            color: #fff;
+            background: #FF6700;
+            border: 0;
+            margin-top: 20px;
+        }
+        .goodName{
+            width: 200px;
+            text-align: center;
+            color: #333333;
+            height: 20px;
+            line-height: 20px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .goodIntro{
+            width: 200px;
+            height: 18px;
+            margin-top: 10px;
+            margin-bottom: 12px;
+            font-size: 12px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            color: #b0b0b0;
+        }
+        .goodPrice{
+            color: #FF6700;
+        }
+        #origin {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+        }
+        #origin img {
+            width: 100%;
+            height: 100%;
+
+        }
+        #move {
+            width: 50%;
+            height: 50%;
+            background-color: #FF0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.6;
+            filter: alpha(opacity=60);
+            cursor: move;
+            display: none;
+        }
+        #bigger {
+            width: 250px;
+            height: 250px;
+            /*大图可能需要盖在其他内容上，在此定位*/
+            position: absolute;
+            left:  260px;
+            top: 125px;
+            overflow: hidden;
+            display: none;
+        }
+        #bigger img {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .content{
+            width: 1226px;
+            height: 800px;
+            margin: 0 auto;
+        }
+        .changeBig{
+            width: 600px;
+            float: left;
+        }
+        .xiaomiDetail{
+            float: right;
+            width: 544px;
+            margin-top: 60px;
+        }
+        .xiaomiDetailTitle{
+            height: 60px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #dfdfdf;
+            position: relative;
+        }
+        .xiaomiDetailTitle h1{
+            margin: 0;
+            font-size: 30px;
+            line-height: 56px;
+            font-weight: normal;
+            color: #333333;
+        }
+        .xiaomiDetailName{
+            float: left;
+            color: #333333;
+        }
+        .xiaomiDetailPrice{
+            margin-left: 10px;
+            color: #ff6700;
+        }
+        .step1title,.step2title,.step3title{
+            height: 36px;
+            line-height: 2;
+            padding: 10px 0;
+            font-weight: normal;
+            font-size: 18px;
+        }
+        .step1titlechoose,.step2titlechoose,.step3titlechoose{
+            margin: 0 0 0 -14px;
+            width: 560px;
+            height: 128px;
+        }
+        .step1titlechoose1,.step2titlechoose1{
+            float: left;
+            width: 263px;
+            height: 48px;
+            line-height: 48px;
+            margin: 0 0 14px 14px;
+            border: 1px solid #dfdfdf;
+            list-style: none;
+            text-align: center;
+            cursor: pointer;
+        }
+        .step3titlechoose1{
+            width: 123.5px;
+            line-height: 18px;
+            padding: 15px 0;
+            height: auto;
+            float: left;
+            margin: 0 0 14px 14px;
+            border: 1px solid #dfdfdf;
+            list-style: none;
+            text-align: center;
+            cursor: pointer;
+        }
+        .active{
+            border-color: #f36701;
+        }
+    </style>
+</head>
+<body onload="window">
+<!-- Top -->
+<img id="Oimg" src="images/shopping-cart.gif"/>
+<div id="msg">已成功加入购物车！</div>
+<div class="topOuter">
+    <div class="top">
+        <ul class="topNavLinks">
+            <li><a class="topNavLink" href="#">小米商城</a>
+                <span>&nbsp;|&nbsp; </span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">MIUI</a>
+                <span>&nbsp;|&nbsp;</span>
+
+            </li>
+            <li>
+                <a class="topNavLink" href="#">米聊</a>
+                <span>&nbsp;|&nbsp;</span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">游戏</a>
+                <span>&nbsp;|&nbsp;</span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">多看阅读</a>
+                <span>&nbsp;|&nbsp;</span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">云服务</a>
+                <span>&nbsp;|&nbsp;</span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">金融</a>
+                <span>&nbsp;|&nbsp;</span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">小米网移动版</a>
+                <span>&nbsp;|&nbsp;</span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">问题反馈</a>
+                <span>&nbsp;|&nbsp;</span>
+            </li>
+            <li>
+                <a class="topNavLink" href="#">Select Region</a>
+            </li>
+        </ul>
+        <a class="indexShopCart" href="shopCart.html">
+            购物车
+        </a>
+        <div class="indexLogin">
+            <a class="topNavLink" href="login.html">登录</a>
+            <span>&nbsp;|&nbsp;</span>
+            <a class="topNavLink" href="register.html">注册</a>
+            <span>&nbsp;|&nbsp;</span>
+            <a class="topNavLink" href="#">消息通知</a>
+        </div>
+    </div>
+</div>
+
+<!-- topNav -->
+<div class="topNav">
+    <div class="topLogoOuter">
+        <div class="topLogo"></div>
+    </div>
+    <!-- 导航 -->
+    <ul class="headerNav">
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">小米手机</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">红米</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">平板·笔记本</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">电视</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">盒子·影音</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">路由器</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">智能硬件</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">服务</a>
+            <ul class="aHoverList"></ul>
+        </li>
+        <li class="headerNavItem">
+            <a href="#" class="headerNavItemA">社区</a>
+            <ul class="aHoverList">
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+                <li class="aHoverListItem">
+                    <img src="../images/maxdingbu160x110.jpg" />
+                    <a href="#">小米Max</a>
+                    <p class="price">1299元起</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <!-- search -->
+    <div id="headerSearch">
+        <form action="" class="searchForm">
+            <input type="text" id="searchText" />
+            <ul id="searchResult">
+                <li><a class="searchResultItem" href="detail.html">小米5</a></li>
+                <li><a class="searchResultItem" href="#">红米Note4</a></li>
+                <li><a class="searchResultItem" href="#">小米盒子</a></li>
+                <li><a class="searchResultItem" href="#">路由器</a></li>
+                <li><a class="searchResultItem" href="#">小米手环</a></li>
+            </ul>
+            <input type="submit" value="搜索" class="searchBtn" />
+            <div class="searchHotWords">
+                <a href="#">红米Note4</a>
+                <a href="#">小米5黑科技</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--content-->
+<div class="content">
+    <!--放大镜-->
+    <div class="changeBig">
+        <div id="goodsBox"></div>
+        <div id="bigger">
+            <img src="../images/xiami50.jpg"/>
+        </div>
+    </div>
+    <!--类型-->
+    <div class="xiaomiDetail">
+        <div class="xiaomiDetailTitle">
+            <h1>
+                <span class="xiaomiDetailName">购买小米5</span>
+                <span class="xiaomiDetailPrice">1499元</span>
+            </h1>
+        </div>
+        <p style="color: red;font-size: 14px">9.21-9.28 购机即赠59元智能显示保护套，数量有限，先到先得！</p>
+        <div class="step1title">1.选择版本</div>
+        <ul class="step1titlechoose">
+            <li class="step1titlechoose1">全网通 3GB内存+64GB容量</li>
+            <li class="step1titlechoose1">全网通 3GB内存+32GB容量</li>
+            <li class="step1titlechoose1">全网通 4GB内存+128GB容量</li>
+        </ul>
+
+        <div class="step2title">2.选择颜色</div>
+        <ul class="step2titlechoose">
+            <li class="step2titlechoose1">金色</li>
+            <li class="step2titlechoose1">银色</li>
+            <li class="step2titlechoose1">浅灰</li>
+        </ul>
+
+        <div class="step3title">3.添加特惠配件套装</div>
+        <ul class="step3titlechoose">
+            <li class="step3titlechoose1">必备套装<br />68元 省39元</li>
+            <li class="step3titlechoose1">实用套装<br />111元 省55元</li>
+            <li class="step3titlechoose1">全能套装<br />197元 省49元</li>
+            <li class="step3titlechoose1">裸机<br />不享受优惠</li>
+        </ul>
+        <p id="chooseDetail"></p>
+    </div>
+</div>
+
+<script src="../JS/CookieUtil.js"></script>
+<script>
+
+    $(function () {
+        // 放大镜
+        $.ajax({
+            url:"../JSON/goodDetail.json",
+            async:true,
+            type:"get",
+            dataType:"json",
+            success: function (res) {
+                var htmlStr = "";
+                // console.log(res);
+                for (var i = 0, len = res.length; i < len; i++) {
+                    htmlStr += '<div id="origin" class="goodPicture"><img src="'
+                            + res[i].picture + '" /><div id="move"></div></div><div class="goodName">'
+                            + res[i].production + '小米5 高配64G</div><div class="goodIntro">'
+                            + res[i].intro + '</div><div class="goodPrice">'
+                            + res[i].price + '</div><button class="goodBtn">加入购物车</button>';
+                }
+                // console.log(htmlStr);
+                $("#goodsBox").html(htmlStr);
+                 var offset = $("#Oimg").offset();
+                $(".goodBtn").click(function(event){
+                    var addcar = $(this);
+                    var img = $(".goodPicture img").attr('src');
+                    var flyer = $('<img class="u-flyer" src="'+img+'">');
+                    flyer.fly({
+                        start: {
+                            left: event.pageX,
+                            top: event.pageY
+                        },
+                        end: {
+                            left: offset.left+10,
+                            top: offset.top+10,
+                            width: 0,
+                            height: 0
+                        },
+                        onEnd: function(){
+                            $("#msg").show().animate({width: '250px'}, 200).fadeOut(1000);
+                            }
+                        
+                    });
+                });
+                $("#Oimg").click(function(){
+                     window.location="shopCart.html"
+                 });
+                // console.log(htmlStr);
+                var origin = document.getElementById("origin");
+                var move = document.getElementById("move");
+                var bigger = document.getElementById("bigger");
+                var bigImage = document.getElementById("bigger").children[0];//大图
+                var scale = 2.5;  // 250/100
+                //检测移动事件
+                origin.onmousemove = function(event) {
+                    //获取事件对象，来获取 鼠标坐标
+                    var e = event || window.event;
+                    var x = e.clientX - move.clientWidth/2 - origin.offsetLeft;
+                    var y = e.clientY - move.clientHeight/2 - origin.offsetTop + document.body.scrollTop;
+                    var maxx = origin.clientWidth - move.clientWidth;//left最大值
+                    var maxy = origin.clientHeight - move.clientHeight;//top最大值
+                    //临界值检测
+                    if(x<0) {//到了最左边
+                        x = 0;
+                    }
+                    if(x>maxx) {
+                        x = maxx; //右侧不超出orgin
+                    }
+                    if(y<0) {
+                        y = 0;//到了最顶部
+                    }
+                    if(y>maxy) {
+                        y = maxy;//到了最下方
+                    }
+                    //让小黄块移动，改变left和top即可
+                    //注意： style中的属性，数值一般有 px,
+                    //但是 scrollLeft/clientWidth/offsetWidth 这些属性是number类型，
+                    move.style.left = x + "px";
+                    move.style.top = y + "px";
+
+                    //大图左上移动，坐标是负数
+                    //小黄块移动 100 ,那么 大图移动  100 * scale
+                    bigImage.style.left = -x*scale + "px";
+                    bigImage.style.top = -y*scale + "px";
+
+                };
+
+                //添加鼠标悬浮事件
+                origin.onmouseenter = function() {
+                    move.style.display = "block";
+                    bigger.style.display = "block";
+                };
+                origin.onmouseleave = function() {
+                    move.style.display = "none";
+                    bigger.style.display = "none";
+                };
+
+                // 加入购物车
+                var goodsBox = document.getElementById("goodsBox");
+                goodsBox.onclick = function (event) {
+                    e = event || window.event;
+                    var tar = e.target || e.srcElement;
+                    if (tar.nodeName.toLocaleLowerCase()=="button") {
+                        addToCart(res[0]);
+                    }
+                };
+
+            },
+            error: function () {}
+        });
+    });
+
+    function addToCart(obj) {
+        //获取当前最新的cookie数据放入到数组中
+        var cookiearr = getAllCookie(); //第一次cookie是 []
+        var ifExist = false;//不存在
+        for(var i = 0, len = cookiearr.length; i < len; i++) {//查找该商品是否已经加入到购物车
+            if(cookiearr[i].production == obj.production) {
+                cookiearr[i].count++;//商品已存在将其数量加一
+                ifExist = true;//已存在
+            }
+        }
+        //判断该商品是否存在
+        if(ifExist==true) {
+
+        }
+        else {//不存在
+            //给obj新增一个属性
+            obj.count = 1;//第一次将该商品加入到购物车，数量都是1
+            cookiearr.push(obj);//把之前不存在的商品插入到数组
+        }
+        //将数组写入到cookie
+        CookieUtil.saveCookie("cart",JSON.stringify(cookiearr));
+    }
+
+    function getAllCookie() {
+        var value = CookieUtil.getCookie("cart");
+        if(!value) {
+            return [];//之前没有存入任何购物车数据
+        }
+        return JSON.parse(value);//购物车在cookie中已存在
+    }
+
+    // 选择
+    $(function () {
+        var $step1titlechoose = $(".step1titlechoose");
+        var $active;
+        $step1titlechoose.find(".step1titlechoose1").click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+            $active = $(".active");
+            // console.log($active);
+        });
+        var $step2titlechoose = $(".step2titlechoose");
+        $step2titlechoose.find(".step2titlechoose1").click(function () {
+            var index = $(this).index();
+            var $img = $("#origin img");
+            var $img2 = $("#bigger img");
+            $(this).addClass("active").siblings().removeClass("active");
+            // console.log($img);
+            $img[0].src = "../images/xiami5" + index + ".jpg";
+            $img2[0].src = "../images/xiami5" + index + ".jpg";
+            $active = $(".active");
+            // console.log($active);
+        });
+        var $step3titlechoose = $(".step3titlechoose");
+        $step3titlechoose.find(".step3titlechoose1").click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+            $active = $(".active");
+            // console.log($active);
+            var $pNode = $("#chooseDetail");
+            var htmlStr1 = "";
+            for (var i = 0, len = $active.size(); i < len; i++) {
+                htmlStr1 += $active.eq(i).html();
+            }
+            $pNode.html("您选择了以下产品：<br />" + htmlStr1);
+        });
+    });
+</script>
+
+<!-- bottom -->
+<div class="bottomTopOuter">
+    <div class="bottomTop">
+        <div class="bottomServiceBox">
+            <ul class="bottomService">
+                <li class="bottomServiceItem bottomServiceItemFirst">1小时快修服务</li>
+                <li class="bottomServiceItem">7天无理由退货</li>
+                <li class="bottomServiceItem">15天免费换货</li>
+                <li class="bottomServiceItem">满150元包邮</li>
+                <li class="bottomServiceItem">520余家售后网点</li>
+            </ul>
+        </div>
+        <!-- 链接 -->
+        <div class="bottomTopLinksBox">
+            <ul class="bottomTopLinks">
+                <li class="bottomTopLinksItem bottomTopLinksItemFirst">帮助中心</li>
+                <li class="bottomTopLinksItem"><a href="#">账户管理</a></li>
+                <li class="bottomTopLinksItem"><a href="#">购物指南</a></li>
+                <li class="bottomTopLinksItem"><a href="#">订操作单</a></li>
+            </ul>
+            <ul class="bottomTopLinks">
+                <li class="bottomTopLinksItem bottomTopLinksItemFirst">帮助中心</li>
+                <li class="bottomTopLinksItem"><a href="#">账户管理</a></li>
+                <li class="bottomTopLinksItem"><a href="#">购物指南</a></li>
+                <li class="bottomTopLinksItem"><a href="#">订操作单</a></li>
+            </ul>
+            <ul class="bottomTopLinks">
+                <li class="bottomTopLinksItem bottomTopLinksItemFirst">帮助中心</li>
+                <li class="bottomTopLinksItem"><a href="#">账户管理</a></li>
+                <li class="bottomTopLinksItem"><a href="#">购物指南</a></li>
+                <li class="bottomTopLinksItem"><a href="#">订操作单</a></li>
+            </ul>
+            <ul class="bottomTopLinks">
+                <li class="bottomTopLinksItem bottomTopLinksItemFirst">帮助中心</li>
+                <li class="bottomTopLinksItem"><a href="#">账户管理</a></li>
+                <li class="bottomTopLinksItem"><a href="#">购物指南</a></li>
+                <li class="bottomTopLinksItem"><a href="#">订操作单</a></li>
+            </ul>
+            <ul class="bottomTopLinks">
+                <li class="bottomTopLinksItem bottomTopLinksItemFirst">帮助中心</li>
+                <li class="bottomTopLinksItem"><a href="#">账户管理</a></li>
+                <li class="bottomTopLinksItem"><a href="#">购物指南</a></li>
+                <li class="bottomTopLinksItem"><a href="#">订操作单</a></li>
+            </ul>
+            <ul class="bottomTopLinks">
+                <li class="bottomTopLinksItem bottomTopLinksItemFirst">帮助中心</li>
+                <li class="bottomTopLinksItem"><a href="#">账户管理</a></li>
+                <li class="bottomTopLinksItem"><a href="#">购物指南</a></li>
+                <li class="bottomTopLinksItem"><a href="#">订操作单</a></li>
+            </ul>
+            <div class="bottomTopContact">
+                <p class="phone">400-100-5678</p>
+                <p class="indexContactTime">
+                    周一至周日 8:00-18:00<br/>
+                    （仅收市话费）
+                </p>
+                <a href="#" class="indexContactBtn">24小时在线客服</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottomOuter">
+    <div class="bottom">
+        <div class="bottomLogo"></div>
+        <div class="bottomTxt">
+            <ul class="bottomLinks">
+                <li>
+                    <a href="#" class="bottomLinksItem">小米商城&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">MIUI&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">米聊&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">多看书城&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">小米路由器&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">视频电话&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">小米后院&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">小米天猫店&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">小米淘宝直营店&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">小米网盟&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">问题反馈&nbsp;|&nbsp;</a>
+                </li>
+                <li>
+                    <a href="#" class="bottomLinksItem">Select Region</a>
+                </li>
+            </ul>
+            <div class="copyRight">
+                <p>&copy;mi.com 京ICP证110507号 京ICP备10046444 京公网安备11010802020134号 京网文[2014]0059-0009号</p>
+                <p>违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+            </div>
+        </div>
+        <div class="bottomFriendLinksBox">
+            <a class="bottomFriendLink" href="#"><img src="../images/friendLink1.png"></a>
+            <a class="bottomFriendLink" href="#"><img src="../images/friendLink2.png"></a>
+            <a class="bottomFriendLink" href="#"><img src="../images/friendLink3.png"></a>
+            <a class="bottomFriendLink" href="#"><img src="../images/friendLink4.png"></a>
+        </div>
+    </div>
+    <div class="bottomBt">探索黑科技，小米为发烧而生！</div>
+</div>
+
+</body>
+</html>

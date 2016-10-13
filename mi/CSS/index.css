@@ -1,0 +1,563 @@
+.indexBanner{
+    width: 1226px;
+    height: 460px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.indexBannerPicsIndex{ 
+    width: 170px;
+    height: 10px;
+    position: absolute;
+    bottom: 25px;
+    right: 50px;
+    z-index: 1;
+}
+.indexBannerRound{
+    margin: 10px;
+    float: left;
+    width: 5px;
+    height: 5px;
+    border: 3px solid #757575;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.2)
+}
+.indexBannerRound:hover{
+    background-color: #ffffff;
+}
+.indexBannerRoundHover{
+    background-color: #ffffff;
+}
+.indexBannerPicsPre,.indexBannerPicsNext{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #b0b0b0;
+}
+.indexBannerPicsPre{
+    left: 234px;
+}
+.indexBannerPicsNext{
+    right: 0;
+}
+
+/* banner */
+.indexLeftNav{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 234px;
+    height: 440px;
+    padding-top: 20px;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+.indexLeftNavItem{
+    padding-left: 30px;
+    width: 204px;
+    height: 42px;
+    font-size: 14px;
+    line-height: 42px;
+    color: #ffffff;
+}
+.indexLeftNavItemHover{
+    height: 460px;
+    width: 555px;
+    position: absolute;
+    background: #ffffff;
+    left: 234px;
+    top: 0;
+    display: none;
+}
+.indexLeftNavItem:hover .indexLeftNavItemHover{
+    display: block;
+}
+.indexLeftNavItemHoverLeft{
+    float: left;
+    width: 265px;
+    height: 458px;
+    padding: 2px 0;
+}
+.indexLeftNavItemHoverLeftItem{
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+.indexABox{
+    display: block;
+    padding: 18px 20px;
+    width: 170px;
+    padding-right: 0;
+    line-height: 40px;
+    color: #333;
+}
+.indexABox img{
+    display: block;
+    width: 40px;
+    height:40px;
+    float: left;
+    margin-right: 12px;
+}
+i{
+    display: block;
+    font-style: normal;
+    color: #333333;
+}
+i:hover{
+    color: #FF6700;
+}
+.btnA{
+    width: 58px;
+    height: 22px;
+    position: absolute;
+    right: 10px;
+    top: 26px;
+    line-height: 22px;
+    text-align: center;
+    border: 1px solid #FF6700;
+    background: #ffffff;
+    color: #FF6700;
+}
+.btnA:hover{
+    background: #FF6700;
+    color: #ffffff;
+}
+.indexLeftNavItem:hover{
+    background-color: #ff6700;
+}
+.indexLeftNavItem span{
+    font-size: 18px;
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    width: 20px;
+    text-align: center;
+    margin-right: 15px;
+    float: right;
+}
+
+/* content1 */
+.indexContent1{
+    width: 1226px;
+    height:170px;
+    margin: 14px auto;
+}
+.indexContent1Links{
+    width: 234px;
+    height: 170px;
+    float: left;
+    background-color: #5f5750;
+}
+.indexContent1LinksItem{
+    position: relative;
+    float: left;
+    width: 70px;
+    height: 82px;
+    padding: 0 3px;
+    line-height: 82px;
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+    border-left: 1px solid rgba(255,255,255,0.4);
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+.noBorder{
+    border-bottom: 0;
+}
+.indexContent1LinksItem:hover{
+    color: #ffffff;
+}
+.indexContent1Imgs{
+    width: 978px;
+    height: 170px;
+    float: left;
+    margin-left: 14px;
+}
+.indexContent1ImgsItem{
+    width: 316px;
+    height: 170px;
+    float: left;
+}
+.indexContent1ImgsItem2{
+    margin: 0 14px;
+}
+.indexContent1ImgsItem img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 小米明星单品  为你推荐 */
+.indexXmStar{
+    width: 1226px;
+    height: 438px;
+    margin: 0 auto;
+    margin-top: 26px;
+}
+.indexBoxHeader{
+    position: relative;
+    height: 58px;
+}
+.indexTitle{
+    font-size: 22px;
+    color: #333333;
+    font-weight: 200;
+    line-height: 58px;
+}
+.more{
+    width: 70px;
+    height: 24px;
+    position: absolute;
+    top:20px;
+    right: 0;
+}
+.indexScrollImgBox{
+    width: 1226px;
+    height: 340px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.indexScrollImg{
+    width: 2480px;
+    height: 340px;
+}
+.indexImgItem{
+    float: left;
+    border-top: 1px solid #ffac13;
+    width: 234px;
+    height: 300px;
+    padding-top: 39px;
+    text-align: center;
+    background: #fafafa;
+    margin-right: 14px;
+}
+.indexImgItem img{
+    width: 160px;
+    height: 160px;
+}
+.PicTitle{
+    color: #212121;
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.intro{
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    margin: 6px 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #b0b0b0;
+}
+
+/* index main */
+.indexMain{
+    height: auto;
+    padding-top: 60px;
+    background-color: #f5f5f5;
+    padding-bottom: 40px;
+}
+
+/* 智能硬件 */
+.indexSmartHardWare{
+    width:1226px;
+    height:686px;
+    margin: 0 auto;
+}
+.indexSmartHardWareBigPic{
+    width: 234px;
+    height: 614px;
+    float: left;
+}
+.indexSmartHardWareLists{
+    width: 992px;
+    height: 614px;
+    float: left;
+}
+
+.indexSmartHardWareListsItem{
+    text-align: center;
+    width: 234px;
+    height: 260px;
+    padding: 20px 0;
+    margin: 0 0 14px 14px;
+    float: left;
+    background-color: #fff;
+    position: relative;
+}
+.reviewcontent{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    width: 234px;
+    height: 0;
+    overflow: hidden;
+    background: #ff6700;
+    color: #333;
+}
+.reviewcontentIntro{
+    width: 174px;
+    height:36px;
+    line-height: 18px;
+    display: block;
+    padding: 8px 30px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+.reviewcontentFrom{
+    width: 174px;
+    height: 18px;
+    line-height: 18px;
+    color: rgba(255,255,255,0.6);
+    display: block;
+}
+/*
+<div class="reviewcontent">
+<span class="reviewcontentIntro">物流超快，包装一打开，我就闻到了一缕口红的清香，陶醉...</span>
+<span class="reviewcontentFrom">来自于 XXX</span>
+</div>*/
+
+/* 搭配  配件  周边 */
+.indexBox{
+    width: 1226px;
+    height: 686px;
+    margin: 0 auto;
+}
+.indexBoxNav{
+    width: 300px;
+    height: 26px;
+    margin: 0;
+    padding: 16px 0 0;
+    font-size:16px;
+    color: #333;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.indexBoxNavItem{
+    float: left;
+    color: #424242;
+    margin: 0 0 0 30px;
+}
+.indexBoxNavItemFirst{
+    color: #ff6700;
+    /*border-bottom: 2px solid #ff6700;*/
+    margin-left: 0;
+}
+.indexBoxLeft{
+    width: 234px;
+    height: 614px;
+    float: left;
+}
+.indexBoxLeftPic{
+    width: 234px;
+    height: 300px;
+    margin-bottom: 14px;
+}
+.indexBoxNavItemHover{
+    position: absolute;
+    top: 58px;
+    left: -692px;
+    width: 992px;
+    height:614px;
+    display: none;
+}
+.indexBoxNavItemHoverFirst{
+    display: block;
+}
+
+/* 热评产品 */
+.indexHotReview{
+    width: 1240px;
+    height:495px;
+    margin: 0 auto;
+}
+.indexHotReviewPic{
+    width: 1240px;
+    height: 415px;
+    margin: 0 auto;
+    margin-left: -14px;
+}
+.IndexHotReviewPicItem{
+    width: 296px;
+    height: 415px;
+    float: left;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    text-align: left;
+    color: #333333;
+    background-color: #ffffff;
+}
+.indexHotReviewPicItemPic{
+    display: block;
+    width: 296px;
+    height: 220px;
+}
+.indexHotReviewPicItemPic img{
+    width: 100%;
+    height: 100%;
+}
+.review{
+    width: 240px;
+    height: 72px;
+    color: #333333;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    padding-left: 28px;
+    margin-bottom: 22px;
+    margin-top: 22px;
+}
+.from {
+    width: 230px;
+    height: 18px;
+    padding-left: 28px;
+    margin-bottom: 8px;
+    color: #b0b0b0;
+}
+.productName{
+    position: relative;
+    display: block;
+    width: 236px;
+    height: 22px;
+    color: #333333;
+    padding-left: 28px;
+}
+.productPrice{
+    height: 22px;
+    display: block;
+    color: #ff6700;
+    position: absolute;
+    top: -11px;
+    right: 95px;
+}
+
+/* 内容 */
+.indexContentBox{
+    width: 1260px;
+    height: 490px;
+    margin: 0 auto;
+    margin-bottom: 22px;
+    overflow: hidden;
+}
+.indexContent{
+    width: 1240px;
+    height: 420px;
+}
+.indexContentItem{
+    float: left;
+    width: 296px;
+    height: 374px;
+    padding: 45px 0 0;
+    border-top: 1px solid #e0e0e0;
+    /*margin-bottom: 14px;*/
+    background: #fff;
+    border-top: 1px solid #ffac13;
+    color: #ffac13;
+    margin-left: 14px;
+}
+.indexContentItemtitle{
+    margin: 0 10px 18px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+/* 轮播图 */
+.lunboBox{
+    position: relative;
+    width: 296px;
+    height: 332px;
+    overflow: hidden;
+}
+.lunbo{
+    /*width: 1184px;
+    height: 340px;*/
+    position: relative;
+    width: 296px;
+    height: 332px;
+    overflow: hidden;
+    text-align: center;
+    overflow: hidden;
+    color: #333;
+}
+.lunboItem{
+    float: left;
+    width: 296px;
+    height: 332px;
+    text-align: center;
+    color: #333;
+    position: absolute;
+    left: 296px;
+}
+.lunboItemFirst{
+    left: 0;
+}
+.lunboTitle{
+    color: #333;
+    margin: 0 20px 5px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.lunboIntro{
+    color: #b0b0b0;
+    margin: 0 48px 10px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+/* 索引 */
+.lunboRound{
+    width: 212px;
+    height: 30px;
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    padding-left: 85px;
+}
+.lunbopage{
+    width: 6px;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    float: left;
+    margin: 12px;
+}
+.lunbopageFirst{
+    border: 2px solid #ff6700;
+    background: #ffffff;
+    margin: 10px;
+}
+.lunboprePage,.lunbonextPage{
+    width: 20px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 24px;
+    z-index: 1;
+    position: absolute;
+    top: 40%;
+    color: #ffffff;
+    background: #e0e0e0;
+    display: none;
+}
+.lunboprePage{
+    left: 0;
+}
+.lunbonextPage{
+    right: 0;
+}
